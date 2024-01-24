@@ -8,13 +8,13 @@ In the first stage, mRMR is used to filter irrelevant and partially redundant fe
 
 ### Data description
 
-There are a total of three files of data are: ExogenousSubstance.xlsx、EndogenousSubstance.xlsx以及DrugEffectIndex(1).xlsx。
+There are a total of three files of data are: ExogenousSubstance.xlsx、EndogenousSubstance.xlsx and DrugEffectIndex.xlsx。
 
 ExogenousSubstance.xlsx：Exogenous substances in ginseng injections, where the horizontal items are characteristics and the vertical items are samples.
 
 EndogenousSubstance.xlsx：Endogenous substances in ginseng injections, where the horizontal items are characteristics and the vertical items are samples.
 
-DrugEffectIndex(1).xlsx：Pharmacodynamic indicators, where the horizontal term is the pharmacodynamic indicator and the vertical term is the sample.
+DrugEffectIndex.xlsx：Pharmacodynamic indicators, where the horizontal term is the pharmacodynamic indicator and the vertical term is the sample.
 
 ## 2. Parameter adjustment
 
@@ -28,19 +28,22 @@ w = (wStart-wEnd)*(iter/nIter-1)**2+wEnd
 
 ## 3. Description of results
 
-![1e0d2bfe117a76be96a8bab56fdc5f1](https://github.com/zmtCode/MCMOPSO1/assets/145536163/3d341a9b-eb14-4e25-976b-c5efdeeb33fc)
+![1e0d2bfe117a76be96a8bab56fdc5f1](https://github.com/zmtCode/MCMOPSO/assets/145536163/290a2d99-051f-4d55-87c8-59024a65db5c)
+
 
 
 
 This is the result graph of the mRMR run to select the optimal number of features, the optimal RMSE is 316.0866 corresponding to 37 features. Then the optimal 37 feature outputs are put in the second stage to screen the final features.
 
-![5f4581e8ac829448ebd9acdd51ab64e](https://github.com/zmtCode/MCMOPSO1/assets/145536163/8fe72fc6-a8b4-44bd-9cbc-41f224ab2359)
+![5f4581e8ac829448ebd9acdd51ab64e](https://github.com/zmtCode/MCMOPSO/assets/145536163/5c568f42-05b6-42c8-87af-74c54a69f3c0)
+
 
 
 
 This is a graph of the results of the three comparative filtering runs, where the first data is the RMSE of 3.482069 before the original no feature selection, the second row of data is the RMSE of 3.26906 obtained by performing the MIC screening and filtering, and the two third rows of data are the proportion of the number of features selected to be in the top 14% of the sorted list, for a total of 112 features, respectively.
 
-![e347369a62d7e3527d023136baea65f](https://github.com/zmtCode/MCMOPSO1/assets/145536163/7da7cd81-11a1-4c5c-ae6f-71686dcd9809)
+![e347369a62d7e3527d023136baea65f](https://github.com/zmtCode/MCMOPSO/assets/145536163/f37c8894-e95c-4069-a6d9-908a66ec7091)
+
 
 
 
